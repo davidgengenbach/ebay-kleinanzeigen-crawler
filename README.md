@@ -9,7 +9,7 @@ open data/index.html
 ```
 
 ## Usage
-```shell
+```
 usage: crawl.py [-h] [--url URL] [--page-start PAGE_START]
                 [--page-end PAGE_END] [--json-out JSON_OUT]
                 [--options OPTIONS]
@@ -26,4 +26,4 @@ optional arguments:
   --page-end PAGE_END   The page number to end at
   --json-out JSON_OUT   The path for the output json.
   --options OPTIONS     Options for kleinanzeigen. Get from the site
-``
+```
