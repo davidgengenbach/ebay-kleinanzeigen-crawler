@@ -40,7 +40,7 @@ def render(ads):
 
 
 def get_results(browser, url, page):
-    page = browser.get(url % (page))
+    page = browser.get(url % ('seite:' + str(page)))
     # Dirty
     domain = '/'.join(url.split('/')[0:3])
     results = []
