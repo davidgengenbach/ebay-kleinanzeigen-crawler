@@ -21,7 +21,7 @@ def main():
 
 def get_args():
     import argparse
-    parser = argparse.ArgumentParser(description='Crawl ebay kleinanzeigen')
+    parser = argparse.ArgumentParser(description='Crawl ebay kleinanzeigen', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--url', default='https://www.ebay-kleinanzeigen.de/s-64283/%s/l4896', help='The start url. Must have a [percent-sign]s portion in the url to insert the "options" like the page num, price etc.')
     parser.add_argument('--page-start', default=1, help='The page number to start at')
     parser.add_argument('--page-end', default=10, help='The page number to end at')
