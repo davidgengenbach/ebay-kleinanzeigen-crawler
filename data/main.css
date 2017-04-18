@@ -1,0 +1,45 @@
+ * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 22px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+tr {
+    border-bottom: 1px solid #777;
+    cursor: pointer;
+}
+
+tr:hover {
+    background: #EEE;
+}
+
+td:first-child {
+    width: 20%;
+    text-align: center;
+}
+
+td:nth-of-type(2) {
+    width: 10%;
+    font-weight: 700;
+    font-size: 120%;
+}
+
+td:nth-of-type(3) h2 {
+    font-size: 120%;
+}
+
