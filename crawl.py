@@ -11,7 +11,9 @@ def main():
     args = get_args()
     browser = mechanicalsoup.Browser()
     results = []
-    for page_num in range(args.page_start, args.page_end):
+    print("Starting to crawl. Options:\n{}\n".format(args))
+    for page_num in range(args.page_start, args.page_end + 1):
+        print("\tCrawling page: {}/{}".format(page_num, args.page_end))
         results += get_results(browser, args.url, page_num)
     with open(args.json_out, 'w') as f:
         json.dump(results, f, indent=4, sort_keys=True)
