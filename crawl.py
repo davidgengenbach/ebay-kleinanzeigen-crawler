@@ -17,7 +17,7 @@ def main():
     for page_num in range(args.page_start, args.page_end + 1):
         url = args.url % ('seite:' + str(page_num))
         print("\tCrawling page: {:2}/{:2} ({})".format(page_num, args.page_end, url))
-        results += get_results(browser, args.url)
+        results += get_results(browser, url)
     with open(args.json_out, 'w') as f:
         json.dump(results, f, indent=4, sort_keys=True)
 
