@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
 
-from attrdict import AttrDict
+# NOTE: attrdict broken in python 3.10 and not maintained.
+# https://github.com/wallento/wavedrompy/issues/32#issuecomment-1306701776
+try:
+    from attrdict import AttrDict
+except ImportError:
+    # Monkey patch collections
+    import collections
+    import collections.abc
+    for type_name in collections.abc.__all__:
+        setattr(collections, type_name, getattr(collections.abc, type_name))
+    from attrdict import AttrDict
+
 import mechanicalsoup
 import json
 
